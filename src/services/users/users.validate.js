@@ -23,7 +23,10 @@ let base = merge({},
       _id: {
         type: ID
       },
-      name: {
+      firstName: {
+        type: "string"
+      },
+      lastName: {
         type: "string"
       }
     }

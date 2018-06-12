@@ -13,7 +13,9 @@ type Post {
  
 type User {
   _id: ID
-  name: String
+  firstName: String
+  lastName: String
+  fullName: String!
   posts: [Post!]
 }
  

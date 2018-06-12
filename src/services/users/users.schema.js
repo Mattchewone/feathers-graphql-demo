@@ -24,7 +24,8 @@ let schema = {
   properties: {
     // !code: schema_properties
     _id: { type: 'ID' },
-    name: {}
+    firstName: {},
+    lastName: {}
     // !end
   },
   // !code: schema_more // !end
@@ -52,6 +53,7 @@ let extensions = {
     ],
     add: {
       // !code: graphql_add
+      fullName: { type: 'String!', args: false },
       posts: { type: '[Post!]', args: false, relation: { ourTable: '_id', otherTable: 'userId' } },
       // !end
     },

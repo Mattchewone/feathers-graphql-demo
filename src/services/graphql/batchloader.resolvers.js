@@ -117,6 +117,13 @@ let moduleExports = function batchLoaderResolvers(app, options) {
 
     User: {
 
+      // fullName: String!
+      // !code: resolver-User-fullName-non
+      fullName: (parent, args, content, ast) => {
+        return `${parent.firstName} ${parent.lastName}`
+      },
+      // !end
+
       // posts: [Post!]
       // !<DEFAULT> code: resolver-User-posts
       posts: getResult('User.posts', '_id', true),

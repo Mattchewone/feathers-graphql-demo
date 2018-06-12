@@ -33,6 +33,12 @@ let moduleExports = function serviceResolvers(app, options) {
 
     User: {
 
+      // fullName: String!
+      fullName:
+        // !<DEFAULT> code: resolver-User-fullName-non
+        (parent, args, content, ast) => { throw Error('GraphQL fieldName User.fullName is not calculated.') },
+        // !end
+
       // posts: [Post!]
       posts:
         // !<DEFAULT> code: resolver-User-posts
