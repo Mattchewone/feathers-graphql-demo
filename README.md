@@ -1,6 +1,6 @@
 # feathers-graphql-demo
 
-> Demo app
+> Feathers Graphql Demo app
 
 ## About
 
@@ -23,6 +23,10 @@ Getting up and running is as easy as 1, 2, 3.
     npm start
     ```
 
+## GraphiQL
+
+Using [graphiql](https://github.com/skevy/graphiql-app) makes it really easy to test queries and see the response.
+
 ## Testing
 
 Simply run `npm test` and all your tests in the `test/` directory will be run.
@@ -34,6 +38,7 @@ Feathers-plus has a powerful command line interface. Here are a few things it ca
 ```
 $ npm install -g @feathers-plus/cli          # Install Feathers-plus CLI
 
+$ feathers-plus generate app                 # Regenerate app
 $ feathers-plus generate service             # Generate a new Service
 $ feathers-plus generate hook                # Generate a new Hook
 $ feathers-plus generate model               # Generate a new Model
