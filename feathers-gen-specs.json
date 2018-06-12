@@ -1,0 +1,36 @@
+{
+  "options": {
+    "ver": "1.0.0",
+    "inspectConflicts": false,
+    "semicolons": false,
+    "freeze": []
+  },
+  "app": {
+    "name": "feathers-graphql-demo",
+    "description": "Demo app",
+    "src": "src",
+    "packager": "npm@>= 3.0.0",
+    "providers": [
+      "rest",
+      "socketio"
+    ]
+  },
+  "services": {
+    "messages": {
+      "name": "messages",
+      "nameSingular": "message",
+      "fileName": "messages",
+      "adapter": "mongoose",
+      "path": "/messages",
+      "isAuthEntity": false,
+      "graphql": true
+    }
+  },
+  "connections": {
+    "mongoose": {
+      "database": "mongodb",
+      "adapter": "mongoose",
+      "connectionString": "mongodb://localhost:27017/feathers_graphql_demo"
+    }
+  }
+}
