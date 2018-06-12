@@ -46,7 +46,7 @@ let moduleExports = {
     patch: [],
     remove: []
     // !end
-  }
+  },
   // !code: moduleExports // !end
 }
 

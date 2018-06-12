@@ -9,7 +9,7 @@ let dialects = {
 }
 // !code: init // !end
 
-let moduleExports = function sqlExecuteSequelize (app) {
+let moduleExports = function sqlExecuteSequelize(app) {
   // !<DEFAULT> code: func_sequelize
   let sequelize = app.get('sequelizeClient')
   if (!sequelize) {

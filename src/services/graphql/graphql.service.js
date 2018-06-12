@@ -13,12 +13,12 @@ const strategy = 'batchloaders'
 console.log(`\n===== configuring graphql service for ${strategy}.\n`)
 
 let schemas = mergeTypes([
-  generatedSchema
+  generatedSchema,
   // !code: schemas // !end
 ])
 
 let resolvers = (app, options) => merge({},
-  generatedResolvers(app, options)
+  generatedResolvers(app, options),
   // !code: batchloader_resolvers // !end
 )
 // !code: init // !end
@@ -29,7 +29,7 @@ let moduleExports = function () {
 
   let options = {
     schemas,
-    resolvers
+    resolvers,
   }
   // !code: func_options // !end
 

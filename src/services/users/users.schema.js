@@ -1,13 +1,13 @@
 
-// Define the Feathers schema for service `messages`. (Can be re-generated.)
+// Define the Feathers schema for service `users`. (Can be re-generated.)
 // !code: imports // !end
 // !code: init // !end
 
 // Define the model using JSON-schema
 let schema = {
   // !<DEFAULT> code: schema_header
-  title: 'Messages',
-  description: 'Messages database.',
+  title: 'Users',
+  description: 'Users database.',
   // !end
   // !code: schema_definitions // !end
 
@@ -23,11 +23,10 @@ let schema = {
   // Fields in the model.
   properties: {
     // !code: schema_properties
-    title: { type: 'string' },
-    description: { type: 'string' },
-    info: { type: 'string' }
+    _id: { type: 'ID' },
+    name: {}
     // !end
-  }
+  },
   // !code: schema_more // !end
 }
 
@@ -35,13 +34,13 @@ let schema = {
 let extensions = {
   // GraphQL generation.
   graphql: {
-    // !<DEFAULT> code: graphql_header
-    // name: 'Message',
-    // service: {
-    //   sort: { _id: 1 },
-    // },
+    // !code: graphql_header
+    name: 'User',
+    service: {
+      sort: { _id: 1 },
+    },
     // sql: {
-    //   sqlTable: 'Messages',
+    //   sqlTable: 'Users',
     //   uniqueKey: '_id',
     //   sqlColumn: {
     //     __authorId__: '__author_id__',
@@ -52,19 +51,19 @@ let extensions = {
       // !code: graphql_discard // !end
     ],
     add: {
-      // !<DEFAULT> code: graphql_add
-      // __author__: { type: '__User__!', args: false, relation: { ourTable: '__authorId__', otherTable: '_id' } },
+      // !code: graphql_add
+      posts: { type: '[Post!]', args: false, relation: { ourTable: '_id', otherTable: 'userId' } },
       // !end
-    }
+    },
     // !code: graphql_more // !end
-  }
+  },
 }
 
 // !code: more // !end
 
 let moduleExports = {
   schema,
-  extensions
+  extensions,
   // !code: moduleExports // !end
 }
 

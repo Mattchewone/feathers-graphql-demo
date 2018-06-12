@@ -4,16 +4,25 @@
 // !code: init // !end
 
 let moduleExports = `
-type Messages {
-  title: String
-  description: String
-  info: String
+type Post {
+  _id: ID
+  text: String
+  userId: ID
+  user: User
+}
+ 
+type User {
+  _id: ID
+  name: String
+  posts: [Post!]
 }
  
 
 type Query {
-  getMessages(key: JSON, query: JSON, params: JSON): Messages
-  findMessages(query: JSON, params: JSON): [Messages]!
+  getPost(key: JSON, query: JSON, params: JSON): Post
+  findPost(query: JSON, params: JSON): [Post]!
+  getUser(key: JSON, query: JSON, params: JSON): User
+  findUser(query: JSON, params: JSON): [User]!
 }
 `
 

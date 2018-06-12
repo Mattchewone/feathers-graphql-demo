@@ -1,5 +1,5 @@
 
-// Hooks for service `messages`. (Can be re-generated.)
+// Hooks for service `posts`. (Can be re-generated.)
 const commonHooks = require('feathers-hooks-common')
 // !code: imports // !end
 
@@ -45,7 +45,7 @@ let moduleExports = {
     patch: [],
     remove: []
     // !end
-  }
+  },
   // !code: moduleExports // !end
 }
 

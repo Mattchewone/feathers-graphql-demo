@@ -9,7 +9,7 @@ let dialects = {
 }
 // !code: init // !end
 
-let moduleExports = function sqlExecuteKnex (app) {
+let moduleExports = function sqlExecuteKnex(app) {
   // !<DEFAULT> code: func_knex
   let knex = app.get('knexClient')
   if (!knex) {

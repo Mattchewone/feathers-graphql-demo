@@ -1,6 +1,6 @@
 
 /* eslint quotes: 0 */
-// Validation definitions for validateSchema hook for service `messages`. (Can be re-generated.)
+// Validation definitions for validateSchema hook for service `posts`. (Can be re-generated.)
 const { validateSchema } = require('feathers-hooks-common')
 const merge = require('lodash.merge')
 const ajv = require('ajv')
@@ -15,40 +15,40 @@ const ID = 'string'
 let base = merge({},
   // !<DEFAULT> code: base
   {
-    title: "Messages",
-    description: "Messages database.",
+    title: "Posts",
+    description: "Posts database.",
     required: [],
     uniqueItemProperties: [],
     properties: {
-      title: {
+      _id: {
+        type: ID
+      },
+      text: {
         type: "string"
       },
-      description: {
-        type: "string"
-      },
-      info: {
-        type: "string"
+      userId: {
+        type: ID
       }
     }
-  }
+  },
   // !end
   // !code: base_more // !end
 )
 // !code: base_change // !end
 
 let create = merge({},
-  base
+  base,
   // !code: create_more // !end
 )
 
 let update = merge({},
-  base
+  base,
   // !code: update_more // !end
 )
 
 let patch = merge({},
   base,
-  { required: undefined }
+  { required: undefined },
   // !code: patch_more // !end
 )
 // !code: all_change // !end
@@ -89,7 +89,7 @@ let moduleExports = {
   validateCreate,
   validateUpdate,
   validatePatch,
-  quickValidate
+  quickValidate,
   // !code: moduleExports // !end
 }
 

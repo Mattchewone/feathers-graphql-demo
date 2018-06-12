@@ -16,12 +16,21 @@
     ]
   },
   "services": {
-    "messages": {
-      "name": "messages",
-      "nameSingular": "message",
-      "fileName": "messages",
+    "posts": {
+      "name": "posts",
+      "nameSingular": "post",
+      "fileName": "posts",
       "adapter": "mongoose",
-      "path": "/messages",
+      "path": "/posts",
+      "isAuthEntity": false,
+      "graphql": true
+    },
+    "users": {
+      "name": "users",
+      "nameSingular": "user",
+      "fileName": "users",
+      "adapter": "mongoose",
+      "path": "/users",
       "isAuthEntity": false,
       "graphql": true
     }

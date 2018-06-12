@@ -1,6 +1,6 @@
 
 /* eslint quotes: 0 */
-// Defines the MongoDB $jsonSchema for service `messages`. (Can be re-generated.)
+// Defines the MongoDB $jsonSchema for service `users`. (Can be re-generated.)
 const merge = require('lodash.merge')
 // !code: imports // !end
 // !code: init // !end
@@ -14,17 +14,11 @@ let moduleExports = merge({},
       _id: {
         bsonType: "objectId"
       },
-      title: {
-        bsonType: "string"
-      },
-      description: {
-        bsonType: "string"
-      },
-      info: {
+      name: {
         bsonType: "string"
       }
     }
-  }
+  },
   // !end
   // !code: moduleExports // !end
 )

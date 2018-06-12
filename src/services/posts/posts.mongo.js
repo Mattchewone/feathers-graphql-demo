@@ -1,19 +1,27 @@
 
 /* eslint quotes: 0 */
-// Defines Mongoose model for service `messages`. (Can be re-generated.)
+// Defines the MongoDB $jsonSchema for service `posts`. (Can be re-generated.)
 const merge = require('lodash.merge')
-// eslint-disable-next-line no-unused-vars
-const mongoose = require('mongoose')
 // !code: imports // !end
 // !code: init // !end
 
 let moduleExports = merge({},
   // !<DEFAULT> code: model
   {
-    title: String,
-    description: String,
-    info: String
-  }
+    bsonType: "object",
+    additionalProperties: false,
+    properties: {
+      _id: {
+        bsonType: "objectId"
+      },
+      text: {
+        bsonType: "string"
+      },
+      userId: {
+        bsonType: "objectId"
+      }
+    }
+  },
   // !end
   // !code: moduleExports // !end
 )

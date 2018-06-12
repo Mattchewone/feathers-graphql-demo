@@ -4,7 +4,7 @@
 // !code: imports // !end
 // !code: init // !end
 
-let moduleExports = function sqlMetadata (app, options) {
+let moduleExports = function sqlMetadata(app, options) {
   let { convertArgsToFeathers, convertArgsToOrderBy, convertArgsToWhere } = options
   let makeOrderBy = convertArgsToOrderBy(options)
   let makeWhere = convertArgsToWhere(options)
@@ -15,9 +15,9 @@ let moduleExports = function sqlMetadata (app, options) {
     Query: {
       fields: {
         // !code: metadata_query_fields // !end
-      }
+      },
       // !code: metadata_query_more // !end
-    }
+    },
   // !code: metadata_more // !end
   }
 

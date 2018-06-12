@@ -1,26 +1,17 @@
 
 /* eslint quotes: 0 */
-// Defines Sequelize model for service `messages`. (Can be re-generated.)
+// Defines Mongoose model for service `users`. (Can be re-generated.)
 const merge = require('lodash.merge')
-const Sequelize = require('sequelize')
 // eslint-disable-next-line no-unused-vars
-const DataTypes = Sequelize.DataTypes
+const mongoose = require('mongoose')
 // !code: imports // !end
 // !code: init // !end
 
 let moduleExports = merge({},
-  // !<DEFAULT> code: sequelize_model
+  // !<DEFAULT> code: model
   {
-    title: {
-      type: DataTypes.TEXT
-    },
-    description: {
-      type: DataTypes.TEXT
-    },
-    info: {
-      type: DataTypes.TEXT
-    }
-  }
+    name: String
+  },
   // !end
   // !code: moduleExports // !end
 )

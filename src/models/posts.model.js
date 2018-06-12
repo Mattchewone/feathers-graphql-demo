@@ -1,10 +1,10 @@
 
-// messages-model.js - A Mongoose model
+// posts-model.js - A Mongoose model
 //
 // See http://mongoosejs.com/docs/models.html
 // for more of what you can do here.
 // !<DEFAULT> code: mongoose_schema
-const mongooseSchema = require('../services/messages/messages.mongoose')
+const mongooseSchema = require('../services/posts/posts.mongoose')
 // !end
 // !code: mongoose_imports // !end
 // !code: mongoose_init // !end
@@ -14,10 +14,10 @@ let moduleExports = function (app) {
   // !code: mongoose_func_init // !end
 
   // !<DEFAULT> code: mongoose_client
-  const messages = new mongooseClient.Schema(mongooseSchema, { timestamps: true })
+  const posts = new mongooseClient.Schema(mongooseSchema, { timestamps: true })
   // !end
 
-  let returns = mongooseClient.model('messages', messages)
+  let returns = mongooseClient.model('posts', posts)
 
   // !code: mongoose_func_return // !end
   return returns

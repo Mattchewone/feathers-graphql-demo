@@ -4,7 +4,7 @@
 // !code: imports // !end
 // !code: init // !end
 
-let moduleExports = function sqlResolvers (app, options) {
+let moduleExports = function sqlResolvers(app, options) {
   let { dialect, executeSql, genAndRunSql } = options
   let genRunSql = genAndRunSql(executeSql, { dialect }, options)
 
@@ -14,7 +14,7 @@ let moduleExports = function sqlResolvers (app, options) {
     Query: {
 
       // !code: resolver_query_more // !end
-    }
+    },
   }
 
   // !code: func_return // !end
