@@ -1,5 +1,5 @@
 
-// Hooks for service `messages`. (Can be re-generated.)
+// Hooks for service `graphql`. (Can be re-generated.)
 const commonHooks = require('feathers-hooks-common')
 // !code: imports // !end
 

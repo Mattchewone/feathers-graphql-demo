@@ -22,8 +22,12 @@ let schema = {
 
   // Fields in the model.
   properties: {
-    // !code: schema_properties // !end
-  },
+    // !code: schema_properties
+    title: { type: 'string' },
+    description: { type: 'string' },
+    info: { type: 'string' }
+    // !end
+  }
   // !code: schema_more // !end
 }
 
@@ -51,16 +55,16 @@ let extensions = {
       // !<DEFAULT> code: graphql_add
       // __author__: { type: '__User__!', args: false, relation: { ourTable: '__authorId__', otherTable: '_id' } },
       // !end
-    },
+    }
     // !code: graphql_more // !end
-  },
+  }
 }
 
 // !code: more // !end
 
 let moduleExports = {
   schema,
-  extensions,
+  extensions
   // !code: moduleExports // !end
 }
 

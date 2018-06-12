@@ -32,5 +32,12 @@
       "adapter": "mongoose",
       "connectionString": "mongodb://localhost:27017/feathers_graphql_demo"
     }
+  },
+  "graphql": {
+    "path": "/graphql",
+    "strategy": "batchloaders",
+    "sqlInterface": null,
+    "requiresAuth": false,
+    "name": "graphql"
   }
 }

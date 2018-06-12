@@ -19,26 +19,36 @@ let base = merge({},
     description: "Messages database.",
     required: [],
     uniqueItemProperties: [],
-    properties: {}
-  },
+    properties: {
+      title: {
+        type: "string"
+      },
+      description: {
+        type: "string"
+      },
+      info: {
+        type: "string"
+      }
+    }
+  }
   // !end
   // !code: base_more // !end
 )
 // !code: base_change // !end
 
 let create = merge({},
-  base,
+  base
   // !code: create_more // !end
 )
 
 let update = merge({},
-  base,
+  base
   // !code: update_more // !end
 )
 
 let patch = merge({},
   base,
-  { required: undefined },
+  { required: undefined }
   // !code: patch_more // !end
 )
 // !code: all_change // !end
@@ -79,7 +89,7 @@ let moduleExports = {
   validateCreate,
   validateUpdate,
   validatePatch,
-  quickValidate,
+  quickValidate
   // !code: moduleExports // !end
 }
 

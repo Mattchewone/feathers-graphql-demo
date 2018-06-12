@@ -28,6 +28,7 @@
     "mocha": "mocha test/ --recursive --exit --timeout 10000"
   },
   "dependencies": {
+    "@feathers-plus/graphql": "^1.9.0",
     "@feathersjs/configuration": "^1.0.2",
     "@feathersjs/errors": "^3.3.0",
     "@feathersjs/express": "^1.2.3",
@@ -38,13 +39,16 @@
     "cors": "^2.8.4",
     "feathers-hooks-common": "^4.12.0",
     "feathers-mongoose": "^6.1.2",
+    "graphql-resolvers-ast": "^1.4.0",
     "helmet": "^3.12.1",
     "lodash.merge": "^4.6.1",
+    "merge-graphql-schemas": "^1.5.1",
     "mongoose": "^5.1.4",
     "serve-favicon": "^2.5.0",
     "winston": "^2.4.2"
   },
   "devDependencies": {
+    "@types/graphql": "^0.13.1",
     "@types/mongoose": "^5.0.15",
     "eslint": "^4.19.1",
     "mocha": "^5.2.0",
